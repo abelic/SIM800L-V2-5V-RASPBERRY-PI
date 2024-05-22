@@ -53,8 +53,10 @@ Raspberry PI Setup
     sudo apt -y install python3-serial
 
     sudo sed -i '1s/^/enable_uart=1\n/' /boot/firmware/config.txt
-    sudo systemctl disable serial-getty@ttyAMA0.service
-    sudo systemctl stop serial-getty@ttyAMA0.service
+
+sudo raspi-config Here go to Interface Options, than to Serial Port. 
+Answer No to first promt " Would you like a login shell to be accessible over serial" and Yes to second "Would you like the serial port hardware to be enabled?"
+
 
     sudo usermod -a -G dialout $USER
 
