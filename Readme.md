@@ -14,31 +14,36 @@ The script is not perfect and it has strange bugs, like a 1KB MMS I received whe
 Wire connection:
 
 P1:
-   3V3  (1) (2)  5V    
- GPIO2  (3) (4)  5V    
- GPIO3  (5) (6)  GND   
- GPIO4  (7) (8)  GPIO14
-   GND  (9) (10) GPIO15
-GPIO17 (11) (12) GPIO18
-GPIO27 (13) (14) GND   
-GPIO22 (15) (16) GPIO23
-   3V3 (17) (18) GPIO24
-GPIO10 (19) (20) GND   
- GPIO9 (21) (22) GPIO25
-GPIO11 (23) (24) GPIO8 
-   GND (25) (26) GPIO7 
+
+         3V3  (1) (2)  5V    
+       GPIO2  (3) (4)  5V    
+       GPIO3  (5) (6)  GND   
+       GPIO4  (7) (8)  GPIO14
+         GND  (9) (10) GPIO15
+      GPIO17 (11) (12) GPIO18
+      GPIO27 (13) (14) GND   
+      GPIO22 (15) (16) GPIO23
+         3V3 (17) (18) GPIO24     
+      GPIO10 (19) (20) GND   
+       GPIO9 (21) (22) GPIO25
+      GPIO11 (23) (24) GPIO8 
+         GND (25) (26) GPIO7 
 
 
 SIM800L V2 5V    Raspberry PI BV2
-Power section:
-    5VIN    ->  (2)  5V 
-    GND     ->  (6)  GND      
-UART TTL section:
-    VDD     ->  3V3  (1)    (Found in docs: it doesn't need to be connected for the module to work, but I haven't tried it)
-    TXD     ->  (10) GPIO15
-    RXD     ->  (8)  GPIO14
-    GND     ->  GND  (9)
+
+   Power section:
+
+       5VIN    ->  (2)  5V 
+       GND     ->  (6)  GND      
+   UART TTL section:
+   
+       VDD     ->  3V3  (1)    (Found in docs: it doesn't need to be connected for the module to work, but I haven't tried it)
+       TXD     ->  (10) GPIO15
+       RXD     ->  (8)  GPIO14
+       GND     ->  GND  (9)
 RST (Used to hard reset the module, function not implemented; it doesn't have to be connected for this to work)
+
     RST     ->  (16) GPIO23
 
 Raspberry PI Setup
